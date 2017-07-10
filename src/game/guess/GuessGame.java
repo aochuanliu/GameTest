@@ -19,9 +19,6 @@ public class GuessGame extends Game {
     public void gameRule(){
         System.out.println("you have "+count +" players to gusee a num in "+min+" and "+max);
     }
-    private void gatherInfo(){
-
-    }
     @Override
     public void startGame(){
         int num = (int)(Math.random()*10);
