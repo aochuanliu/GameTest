@@ -1,26 +1,54 @@
 package game.simpledotcom;
 
+import java.util.ArrayList;
+
 /**
  * Created by aoliu on 2017/7/10.
  */
 public class DotCom {
-    private int point1;
-    private int point2;
-    private int point3;
+    //private int NUM = 3;
+    private ArrayList<Integer> point;
+    //private boolean[] pointHited = new boolean[NUM];
 
-    public DotCom(int point){
-        point1 = point;
-        point2 = ++point;
-        point3 = ++point;
+
+    public DotCom(ArrayList<Integer> _point){
+        //int i;
+        //point= new int [] (NUM);
+        //pointHited = new int [](NUM);
+        point=_point ;
+      /*  for(int i= 0; i<NUM;i++){
+            pointHited[i] = false;
+        }*/
     }
-    public boolean hitPoint( int enterNum){
-        if(enterNum == point1){
-            return true;
-        }else if(enterNum == point2){
-            return true;
-        }else if(enterNum == point3){
-            return true;
+    /*
+    public String hitPoint( int enterNum){
+        String result;
+        for(int i=0;i<NUM;i++){
+            if(enterNum == point[i]) {
+                if (pointHited[i] == true) {
+                    return "already hited";
+                }
+                pointHited[i] = true;
+                for(int j= 0;j <NUM;j++){
+                    if(pointHited[j]!=true){
+                        return "hit";
+                    }
+                }
+                return "kill";
+            }
         }
-        return false;
+        return "miss";
+    }*/
+    public String hitPoint(int entePoint){
+        String result = "miss";
+        int index=point.indexOf((Integer)entePoint);
+        if(index >= 0){
+            point.remove(index);
+            if(point.isEmpty()){
+                result = "kill";
+            }else
+                result = "hit";
+        }
+        return result;
     }
 }
