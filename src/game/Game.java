@@ -1,5 +1,6 @@
 package game;
 
+import game.dotcombust.DotComBust;
 import game.guess.GuessGame;
 import game.simpledotcom.SimpleDotCom;
 
@@ -18,6 +19,10 @@ public class Game {
                 System.out.println(" you select a Simple Dot Com");
                 return new SimpleDotCom();
             }
+            case 3:{
+                System.out.println(" you select a Dot Com Bust");
+                return new DotComBust();
+            }
             default:
                 return null;
         }
@@ -27,6 +32,7 @@ public class Game {
         System.out.println("please select game number");
         System.out.println("1. Guess");
         System.out.println("2. Simple Dot Com");
+        System.out.println("3 DotComBust");
         System.out.println("0. Exit");
     }
     public Game(String name){
