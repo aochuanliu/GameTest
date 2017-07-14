@@ -1,0 +1,12 @@
+added by aochuanliu
+
+this is gameHub:
+1.Guess Game
+ three people need to enter a number between 0-6.
+
+2.Simple Dot Com Game
+you need hit a Dot Com, which need three serial points in 0-6;
+enter
+3.Dot Com Game
+One people enter locations to hit three Dot Coms on 7*7. A Dot Com need three locations.
+Example: A3,B3,C3 to hit "Pet.com.cn"
